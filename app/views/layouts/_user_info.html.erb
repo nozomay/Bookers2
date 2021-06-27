@@ -3,17 +3,18 @@
   <table class="table">
     <tbody>
       <tr>
-      <th>name</th>
-        <th><%= current_user.name %></th>
+        <th>name</th>
+        <th><%= user.name %></th>
       </tr>
       <tr>
         <th>introduction</th>
-        <th><%= current_user.introduction %></th>
+        <th><%= user.introduction %></th>
       </tr>
     </tbody>
   </table>
-  <% if user.id == current_user.id %>
   <div class="row">
-    <%= link_to "プロフィール編集", edit_user_path(user) %>
+
+      <%= link_to 'プロフィール', edit_user_path(@user), class: "btn btn-outline-warning btn-sm btn-block" %>
+
   </div>
-  <% end %>
+
