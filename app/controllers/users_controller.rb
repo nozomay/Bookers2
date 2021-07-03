@@ -2,13 +2,13 @@ class UsersController < ApplicationController
   def index
     @users = User.all
     @book = Book.new
-
+    @user = current_user
   end
 
   def create
     @book = Book.new(book_params)
     if @book.save
-      redirect_to "/books/#{@book.id}", notice: "Book was successfully created."
+      redirect_to book_path(@book),notice: "You have created book successfully."
     else
       @books = Book.all
       render 'index'
@@ -33,7 +33,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     @user.update(user_params)
-    redirect_to user_path(@user.id)
+    redirect_to user_path(@user.id),notice: "You have updated user successfully."
   end
 
   private
