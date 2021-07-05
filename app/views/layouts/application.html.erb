@@ -23,39 +23,39 @@
           <ul class="navbar-nav ml-auto">
             <% if user_signed_in? %>
               <li>
-                <%= link_to(user_path(current_user.id), class: "text-light") do %>
-                  <i class="fas fa-home"></i> Home &nbsp;
+                <%= link_to(user_path(current_user.id), class: "text-light px-2") do %>
+                  <i class="fas fa-home"></i> Home
                 <% end %>
               </li>
               <li>
-                <%= link_to(users_path, class: "text-light") do %>
-                  <i class="fas fa-users"></i> Users &nbsp;
+                <%= link_to(users_path, class: "text-light px-2") do %>
+                  <i class="fas fa-users"></i> Users
                 <% end %>
               </li>
               <li>
-                <%= link_to(books_path, class: "text-light") do %>
-                  <i class="fas fa-book-open"></i> Books &nbsp;
+                <%= link_to(books_path, class: "text-light px-2") do %>
+                  <i class="fas fa-book-open"></i> Books
                 <% end %>
               </li>
               <li>
-                <%= link_to(destroy_user_session_path, method: :delete, class: "text-light")  do %>
-                  <i class="fas fa-sign-out-alt"></i> logout &nbsp;
+                <%= link_to(destroy_user_session_path, method: :delete, class: "text-light px-2")  do %>
+                  <i class="fas fa-sign-out-alt"></i> logout
                 <% end %>
               </li>
             <% else %>
               <li>
-                <%= link_to(root_path, class: "text-light") do %>
-                  <i class="fas fa-home"></i> Home &nbsp;
+                <%= link_to(root_path, class: "text-light px-2") do %>
+                  <i class="fas fa-home"></i> Home
                 <% end %>
               </li>
               <li>
-                <%= link_to(home_about_path, class: "text-light") do %>
-                  <i class="fas fa-link"></i> About &nbsp;
+                <%= link_to(home_about_path, class: "text-light px-2") do %>
+                  <i class="fas fa-link"></i> About
                 <% end %>
               </li>
               <li>
-                <%= link_to(new_user_registration_path, class: "text-light") do %>
-                  <i class="fas fa-user-plus"></i> sign up &nbsp; 
+                <%= link_to(new_user_registration_path, class: "text-light px-2") do %>
+                  <i class="fas fa-user-plus"></i> sign up
                 <% end %>
               </li>
               <li>
@@ -69,7 +69,6 @@
         </div>
       </nav>
     </header>
-
       <% if flash[:notice] %>
         <p id="notice">
           <%= flash[:notice] %>
